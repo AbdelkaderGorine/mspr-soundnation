@@ -20,10 +20,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
-            <!-- liens de navigation -->
+            <!-- liens de navigation et logo -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="ticket.html">Billetterie</a></li>
                     <li class="nav-item"><a class="nav-link" href="programmation.html">Programmation</a></li>
@@ -32,46 +31,37 @@
                     <li class="nav-item"><a class="nav-link" href="partenaires.html">Partenaires</a></li>
                 </ul>
             </div>
+
+            <!-- logo -->
+            <a href="index.html" class="navbar-brand mx-auto">
+                <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
+            </a>
         </div>
     </header>
-     <!-- logo -->
-<!-- Conteneur central pour logo et liens de navigation -->
-<div class="d-flex justify-content-center w-100">
-    <!-- logo -->
-    <a href="index.html" class="navbar-brand mx-auto">
-        <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
-    </a>
-</div>
-
-    <section class="container-fluid mt-4">
-        <h1 class="h3">Nous contacter</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quod et enim?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla aperiam eligendi expedita.</p>
-    </section>
 
     <section class="container-fluid">
-        <form action="">
+        <form action="#">
             <h2 class="h3">Formulaire de contact</h2>
             <fieldset>
                 <legend>Informations personnelles</legend>
 
-                <div class="mb-4 form-floating">
-                    <input type="text" name="fName" id="fName" class="form-control" placeholder="Votre prénom">
+                <div class="mb-4 p-3 form-floating">
+                    <input type="text" name="fName" id="fName" class="form-control" placeholder="Votre prénom" aria-label="Votre prénom">
                     <label for="fName">Votre prénom</label>
                 </div>
 
-                <div class="mb-4 form-floating">
-                    <input type="text" name="lName" id="lName" class="form-control" placeholder="Votre nom">
+                <div class="form-floating">
+                    <input type="text" name="lName" id="lName" class="form-control" placeholder="Votre nom" aria-label="Votre nom">
                     <label for="lName">Votre nom</label>
                 </div>
 
-                <div class="mb-4 form-floating">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Votre email">
+                <div class="form-floating">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Votre email" aria-label="Votre email">
                     <label for="email">Votre email</label>
                 </div>
 
-                <div class="mb-4 form-floating">
-                    <select name="country" id="country" class="form-select">
+                <div class="form-floating">
+                    <select name="country" id="country" class="form-select" aria-label="Votre pays">
                         <option selected>---Choisissez votre pays---</option>
                         <option value="FR">France</option>
                         <option value="BE">Belgique</option>
@@ -86,7 +76,7 @@
                     <h4>Envoyez-nous un message</h4>
                     <div class="mb-3">
                         <label for="message" class="form-label">Tapez votre message</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Votre message" aria-label="Votre message"></textarea>
                     </div>
                 </div>
             </fieldset>
@@ -99,13 +89,13 @@
 
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" name="newsletter" value="true" class="form-check-input">Oui
+                            <input type="radio" name="newsletter" value="true" class="form-check-input" aria-label="Oui à la newsletter">Oui
                         </label>
                     </div>
                         
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" name="newsletter" value="false" checked class="form-check-input">Non
+                            <input type="radio" name="newsletter" value="false" checked class="form-check-input" aria-label="Non à la newsletter">Non
                         </label>
                     </div>
                 </div>
@@ -115,21 +105,19 @@
                     
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input type="checkbox" name="how" value="social" class="form-check-input">Réseaux sociaux
+                            <input type="checkbox" name="how" value="social" class="form-check-input" aria-label="Réseaux sociaux">Réseaux sociaux
                         </label>
                     </div>
                     
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input type="checkbox" name="how" value="ad" class="form-check-input">Publicité
+                            <input type="checkbox" name="how" value="ad" class="form-check-input" aria-label="Publicité">Publicité
                         </label>
                     </div>
                 </div>
             </fieldset>
             <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-primary">
-                    Valider
-                </button>
+                <button type="submit" class="btn btn-primary">Valider</button>
             </div>
         </form>
     </section>
@@ -152,5 +140,6 @@
     </footer>
 </body>
 </html>
+
 
 
