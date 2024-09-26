@@ -31,113 +31,65 @@
                     <li class="nav-item"><a class="nav-link" href="partenaires.html">Partenaires</a></li>
                 </ul>
             </div>
-
-            <!-- logo -->
-            <a href="index.html" class="navbar-brand mx-auto">
-                <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
-            </a>
-        </div>
+            </div>
     </header>
-
-    <section class="container-fluid">
-        <form action="#">
-            <h2 class="h3">Formulaire de contact</h2>
-            <fieldset>
-                <legend>Informations personnelles</legend>
-
-                <div class="mb-4 p-3 form-floating">
-                    <input type="text" name="fName" id="fName" class="form-control" placeholder="Votre prénom" aria-label="Votre prénom">
-                    <label for="fName">Votre prénom</label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="text" name="lName" id="lName" class="form-control" placeholder="Votre nom" aria-label="Votre nom">
-                    <label for="lName">Votre nom</label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Votre email" aria-label="Votre email">
-                    <label for="email">Votre email</label>
-                </div>
-
-                <div class="form-floating">
-                    <select name="country" id="country" class="form-select" aria-label="Votre pays">
-                        <option selected>---Choisissez votre pays---</option>
-                        <option value="FR">France</option>
-                        <option value="BE">Belgique</option>
-                        <option value="CA">Canada</option>
-                        <option value="CH">Suisse</option>
-                    </select>
-                    <label for="country">Votre pays</label>
-                </div>
-
-                <!-- box pour les messages -->
-                <div class="mb-4 p-3 border rounded">
-                    <h4>Envoyez-nous un message</h4>
+       <!-- logo -->
+<!-- Conteneur central pour logo et liens de navigation -->
+<div class="d-flex justify-content-center w-100">
+    <!-- logo -->
+    <a href="index.html" class="navbar-brand mx-auto">
+        <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
+    </a>
+</div>
+  <!-- Formulaire de contact -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="contact-form-container">
+                <h2 class="text-center mb-4">Contactez-nous</h2>
+                <form id="contact-form">
                     <div class="mb-3">
-                        <label for="message" class="form-label">Tapez votre message</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Votre message" aria-label="Votre message"></textarea>
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Vos préférences</legend>
-
-                <div class="mb-4">
-                    <p class="h6">Désirez-vous vous inscrire à notre newsletter ?</p>
-
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input type="radio" name="newsletter" value="true" class="form-check-input" aria-label="Oui à la newsletter">Oui
-                        </label>
+                    <div class="mb-3">
+                        <label for="firstname" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" required>
                     </div>
-                        
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input type="radio" name="newsletter" value="false" checked class="form-check-input" aria-label="Non à la newsletter">Non
-                        </label>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Adresse email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
-                </div>
-
-                <div class="mb-4">
-                    <p class="h6">Comment avez-vous entendu parler de nous ? <span class="text-muted">(Plusieurs réponses possibles)</span></p>
-                    
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input type="checkbox" name="how" value="social" class="form-check-input" aria-label="Réseaux sociaux">Réseaux sociaux
-                        </label>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input type="checkbox" name="how" value="ad" class="form-check-input" aria-label="Publicité">Publicité
-                        </label>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Envoyez</button>
                     </div>
-                </div>
-            </fieldset>
-            <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-primary">Valider</button>
-            </div>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Suivez-nous sur les réseaux sociaux</p>
-                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.snapchat.com" target="_blank" aria-label="Snapchat" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                </div>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
+</div>
+    
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Suivez-nous sur les réseaux sociaux</p>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.snapchat.com" target="_blank" aria-label="Snapchat" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
 

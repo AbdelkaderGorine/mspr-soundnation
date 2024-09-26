@@ -1,10 +1,9 @@
-/* Définition des variables CSS */
 :root {
     --color-text: #FFC0CB; /* Or rosé */
     --color-bg: #001f3f; /* Bleu foncé */
     --color-accent: #FF6347; /* Accent or rosé/orangé */
-    --color-hover: #FFA07A; /* Hover orangé clair */
-    --gradient-bg: linear-gradient(45deg, #FFA07A, #FF6347); /* Dégradé or rosé/orangé */
+    --color-hover: #FF4500; /* Orange vif */
+    --gradient-bg: linear-gradient(45deg, #FFCC00, #FF9900, #FF6F00, #FF4500, #FF6347); /* Dégradé d'orange */
     --form-bg: #002b5c; /* Fond pour les formulaires */
 }
 
@@ -23,18 +22,40 @@ h1, h2, h3, h4, h5, h6, p, a, label, input, select, textarea {
     color: var(--color-text);
 }
 
-/* Header et Footer avec dégradé */
-header, footer {
+/* Style commun pour le header et le footer */
+header.navbar, .footer {
     background: var(--gradient-bg);
-    color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
+/* Style spécifique pour le header */
+header.navbar {
+    color: #000000;
+}
+
+header .navbar-nav .nav-link {
+    color: #000000;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+header .navbar-nav .nav-link:hover,
+header .navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+header .navbar-toggler {
+    border-color: #000000;
+}
+
+header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* Logo dans le header */
-.navbar-logo {
-    max-width: 150px;
-    height: auto;
+header .navbar-logo {
+    max-width: 100px;
 }
 
 /* Box et Cards avec bordure or rosé et fond bleu foncé */
@@ -80,17 +101,72 @@ input:focus, select:focus, textarea:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 192, 203, 0.5);
 }
+/* Style pour la box de billetterie */
+.ticketing-box {
+    background: var(--gradient-bg);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-/* Liens dans le footer */
+.ticketing-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.ticketing-link {
+    display: block;
+    text-decoration: none;
+}
+
+.ticketing-box h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.ticketing-box p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.ticketing-link:hover h2,
+.ticketing-link:hover p {
+    color: #FFFFFF;
+}
+
+/* Style pour le footer */
+.footer {
+    color: #000000;
+}
+
+.footer p {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
 .footer a {
-    color: var(--color-text);
+    color: #000000;
+    font-size: 24px;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: var(--color-accent);
+    color: #FFFFFF;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer .copyright i {
+    margin-right: 5px;
 }
 
 /* Conteneur vidéo */
@@ -106,4 +182,43 @@ input:focus, select:focus, textarea:focus {
     max-width: 900px;
     height: 500px;
     border: none;
+}
+/* Style pour le formulaire de contact */
+.contact-form-container {
+    background-color: var(--form-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form-container h2 {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+#contact-form .form-label {
+    color: var(--color-text);
+}
+
+#contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+}
+
+#contact-form .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 99, 71, 0.25);
+    border-color: var(--color-accent);
+}
+
+#contact-form .btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transition: all 0.3s ease;
+}
+
+#contact-form .btn-primary:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+    transform: translateY(-2px);
 }

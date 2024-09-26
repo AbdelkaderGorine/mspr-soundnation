@@ -33,15 +33,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- logo -->
-            <div class="d-flex justify-content-center w-100">
-                <a href="index.html" class="navbar-brand mx-auto">
-                    <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
-                </a>
-            </div>
-
-            <!-- liens de navigation -->
+    
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand mx-auto">
+                <img src="assets/soundnationlogo.png" alt="logosoundnation" class="navbar-logo">
+            </a>
+    
+            <!-- Liens de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
@@ -71,8 +69,9 @@
             <div class="col-md-6 mb-4">
                 <a href="sceneZeus.html" class="card text-center h-100" style="text-decoration: none; color: inherit;">
                     <div class="card-body card-custom-height box-style">
-                        <h5 class="card-title">Scène Zeus</h5>
-                        <p class="card-text">De la musique électro</p>
+                        <img src="assets/zeus.jpg" class="card-img-top" alt="Zeus">
+                        <h2 class="card-title">Scène Zeus</h2>
+                        <p>class="card-text">Une scène où le hip-hop et le rap mettent le feu, illuminés par des éclairs d'énergie créative</p>
                     </div>
                 </a>
             </div>
@@ -81,8 +80,9 @@
             <div class="col-md-6 mb-4">
                 <a href="sceneHades.html" class="card text-center h-100" style="text-decoration: none; color: inherit;">
                     <div class="card-body card-custom-height box-style">
-                        <h5 class="card-title">Scène Hadès</h5>
-                        <p class="card-text">Des artistes 100% féminines</p>
+                        <img src="assets/hades.jpg" class="card-img-top" alt="Hades">
+                        <h2 class="card-title">Scène Hadès</h2>
+                        <p class="card-text">Du métal venu tout droit des enfers</p>
                     </div>
                 </a>
             </div>
@@ -93,8 +93,9 @@
             <div class="col-md-6 mb-4">
                 <a href="scenePoseidon.html" class="card text-center h-100" style="text-decoration: none; color: inherit;">
                     <div class="card-body card-custom-height box-style">
-                        <h5 class="card-title">Poséidon</h5>
-                        <p class="card-text">De la musique électro</p>
+                        <img src="assets/poseidon.jpg" class="card-img-top" alt="Poséidon">
+                        <h2 class="card-title">Scène Poséidon</h2>
+                        <p class="card-text">Plongez dans les abysses avec des rythmes électro profonds et envoûtants</p>
                     </div>
                 </a>
             </div>
@@ -103,19 +104,27 @@
             <div class="col-md-6 mb-4">
                 <a href="sceneAthena.html" class="card text-center h-100" style="text-decoration: none; color: inherit;">
                     <div class="card-body card-custom-height box-style">
-                        <h5 class="card-title">Athéna</h5>
-                        <p class="card-text">Des artistes 100% féminines</p>
+                        <img src="assets/athena.jpg" class="card-img-top" alt="Athéna">
+                        <h2 class="card-title">Scène Athéna</h2>
+                        <p class="card-text">Une scène 100% féminine, où la sagesse et l'esprit d'Athéna prennent vie</p>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid btn-container">
-        <a href="ticket.html" class="btn btn-primary btn-fullwidth text-center">
-            Billetterie
-        </a>
-    </div>  
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="ticketing-box">
+                    <a href="ticket.html" class="ticketing-link">
+                        <h2 class="mb-2">Billetterie</h2>
+                        <p class="mb-0">Cliquez ici pour acheter vos billets</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container-fluid">
         <h2 class="text-center mb-3">Plan du festival</h2>
@@ -135,22 +144,24 @@
 
         // Ajouter un marqueur
         var marker = L.marker([48.8566, 2.3522]).addTo(map);
-        marker.bindPopup('<b>Votre festival ici!</b>').openPopup();
+        marker.bindPopup('<b>Le festival se trouve ici!</b>').openPopup();
     </script>
-     <!-- Footer -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Suivez-nous sur les réseaux sociaux</p>
-                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.snapchat.com" target="_blank" aria-label="Snapchat" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                </div>
+            <p>Suivez-nous sur les réseaux sociaux</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.snapchat.com" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
             </div>
+            <div class="copyright">
+                <i class="far fa-copyright"></i> 2024 Sound Nation. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
         </div>
     </footer>
 </body>
